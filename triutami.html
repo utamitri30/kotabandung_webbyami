@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page WebGIS Kota Bandung</title>
+    <link rel="stylesheet" href="css/style.css">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Leaflet Plugins -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.4.0/src/easy-button.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--Header Section-->
+    <header id="navbar"> 
+        <div class="container"> 
+            <div class="logo"> 
+                <img src="asset/logo.png" alt="Logo" width="100"> 
+                <h1>WebGIS Kota Bandung</h1> 
+            </div> 
+            <nav> 
+                <ul> 
+                    <li><a href="#hero-section">Home</a></li> 
+                    <li><a href="#map-section">Map</a></li> 
+                    <li><a href="#data-section">Data</a></li> 
+                    <li><a href="#author-section">Author</a></li> 
+                    <li><a href="#footer">Contact</a></li> 
+                </ul> 
+            </nav> 
+        </div> 
+    </header> 
+
+    <!--Hero Section-->
+    <div id="hero-section" class="hero-section"> 
+        <div class="hero-content"> 
+            <h1>WebGIS Basis Data Spasial Kota Bandung</h1> 
+            <p>Halaman untuk Melakukan Eksplorasi Basis Data Spasial di Kota Bandung</p> 
+        </div> 
+    </div> 
+
+    <!--Map Section-->
+   <!-- HTML Struktur -->
+<div id="map-section">  
+    <h2>Jelajahi WebGIS Basis Data Spasial Kota Bandung</h2> 
+    <div id="map"></div> 
+</div>
+
+ 
+    <!--Data Section-->
+    <div id="data-section"> 
+        <h2>Data Tersedia</h2> 
+        <div class="container"> 
+            <div class="column"> 
+                <div class="data-item"> 
+                    <img src="asset/administrasi.webp"alt="administrasi"> 
+                    <div class="description"> 
+                        <h3>Administrasi</h3> 
+                        <p>Administrasi Kota Bandung adalah sistem pengelolaan pemerintahan yang bertanggung jawab atas pelayanan publik, pembangunan, dan pengaturan wilayah di Kota Bandung. Kota ini dipimpin oleh seorang Wali Kota dan Wakil Wali Kota yang dibantu oleh perangkat daerah seperti dinas, badan, dan kecamatan. Administrasi Kota Bandung berfokus pada bidang-bidang seperti pendidikan, kesehatan, infrastruktur, ekonomi, sosial, dan lingkungan, dengan tujuan meningkatkan kesejahteraan masyarakat dan menjaga ketertiban kota.Kota Bandung terdiri atas 30 kecamatan dan 151 kelurahan. Kecamatan Gedebage menjadi kecamatan terluas di Kota Bandung dengan luas wilayah sebesar 9,58 km2. Sementara, kecamatan dengan luas wilayah terkecil ialah Kecamatan Astanaanyar yang memiliki luas sebesar 2,89 km2</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="column"> 
+                <div class="data-item">                    
+                    <img src= "asset/wisata.jpg"alt="wisata"> 
+                                        <div class="description"> 
+                                            <h3>Wisata</h3> 
+                                            <p>Wisata Kota Bandung menawarkan berbagai pilihan mulai dari keindahan alam, wisata belanja, kuliner, hingga sejarah dan budaya. 
+                                            Dikenal dengan julukan "Kota Kembang", Bandung punya tempat-tempat populer seperti Gedung Sate, Lembang, Kawah Putih, Braga City Walk, dan Dago. 
+                                            Selain itu, kota ini terkenal dengan factory outlet, kafe kreatif, dan taman-taman kota yang menarik seperti Kiara Artha Park. Serta wisata edukatif seperti museum geologi</p>                              </div> 
+                                    </div> 
+                                </div> 
+                                <div class="column"> 
+                                    <div class="data-item"> 
+                                        <img src="asset/publik.jpg"alt="publik"> 
+                                        <div class="description"> 
+                                            <h3>Fasilitas Publik</h3> 
+                                            <p>Fasilitas publik di Kota Bandung cukup beragam dan terus berkembang untuk memenuhi kebutuhan warganya. Kota ini memiliki taman-taman kota yang tertata rapi, rumah sakit dan puskesmas, layanan transportasi umum seperti Trans Metro Bandung, terminal, stasiun kereta api, serta pusat pendidikan dari tingkat dasar hingga perguruan tinggi. Selain itu, Bandung juga menyediakan fasilitas olahraga seperti Gasibu, pusat kebudayaan, dan layanan digital publik untuk memudahkan akses informasi dan pelayanan pemerintahan.</p> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                            <div class="container"> 
+                                <div class="column"> 
+                                    <div class="data-item"> 
+                                        <img src="asset/geografis.jpg"alt="geografis"> 
+                                        <div class="description"> 
+                                            <h3>Kondisi Geografis</h3> 
+                                            <p>Kondisi geografis Kota Bandung terletak di dataran tinggi dengan ketinggian 
+                        sekitar 768 meter di atas permukaan laut, dikelilingi pegunungan. 
+                        Kota ini berada di dalam cekungan Bandung, yang dulunya merupakan danau purba. Karena letak geografisnya, 
+                        Bandung memiliki udara yang relatif sejuk dibandingkan kota-kota besar lain di Indonesia, serta tanah yang subur. Secara geografis, Kota Bandung terletak di wilayah Jawa Barat dan merupakan ibu kota provinsi Jawa Barat. 
+                        Kota Bandung sendiri terletak di antara 1070 - 430 Lintang Timur dan 6° 00 - 6P 20 Lintang Selatan.</p> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                <div class="column"> 
+                                    <div class="data-item"> 
+                                        <img src="asset/bencana_banjir.jpg"alt="bencana_banjir">                                        <div class="description"> 
+                                            <h3>Kerawanan Bencana</h3> 
+                                            <p>Kota Bandung, yang terletak di cekungan dikelilingi pegunungan, memiliki kondisi geografis yang membuatnya rentan terhadap berbagai bencana alam. 
+                                                Setiap musim hujan tiba, sejumlah kawasan di Bandung kerap dilanda banjir akibat meluapnya sungai dan sistem drainase yang belum sepenuhnya optimal. Di wilayah perbukitan seperti Dago dan Lembang, longsor menjadi ancaman nyata, terutama saat curah hujan tinggi mengguyur daerah tersebut.
+                            Selain itu, keberadaan Sesar Lembang yang aktif menempatkan Bandung dalam zona rawan gempa bumi, 
+                            meskipun aktivitas seismik besar belum terjadi dalam beberapa dekade terakhir.</p> 
+                                        </div> 
+                                    </div>
+                                </div> 
+                            </div> 
+     <!--Author Section-->
+    <div id="author-section">
+        <div class="author-content"> 
+            <h2>Tentang Pembuat</h2> 
+            <img src="asset/profile.jpg" alt="Profile Picture" class="profile-picture"> 
+            <div class="author-name"> 
+                <h3>Tri Utami</h3> 
+            </div> 
+            <p>Seorang mahasiswa semester 4 jurusan Sains Informasi Geografi di Universitas
+Pendidikan Indonesia. Saya memiliki minat besar dalam bidang geospasial.Saat ini memiliki minat pada SIG, penginderaan jauh, 
+WebGIS, dan SIG untuk mitigasi bencana dan termotivasi untuk terus belajar dan berkembang sebagai 
+analis SIG. Saya juga memiliki komunikasi yang baik serta manajemen waktu yang baik. Selain pada bidang geospasial
+saya juga memiliki minat pada bidang informatika</p> 
+        </div> 
+    </div> 
+     <!--footer Section-->
+    <div id="footer"> 
+        <div class="footer-content"> 
+            <h3>Hubungi Saya</h3> 
+            <p>Email: triutamii301205@gmail.com</p> 
+            <p>Phone: +628218946154</p> 
+        </div> 
+    </div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<!-- Leaflet Plugin JS -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+<script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+
+<!-- jQuery untuk AJAX requests -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Script utama -->
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>
